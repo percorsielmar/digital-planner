@@ -6,6 +6,14 @@ import { ArrowRight, Check, Mail } from "lucide-react";
 import { Logo } from "./Navbar";
 import { asset } from "@/lib/assets";
 
+const CONTACT_EMAIL = "percorsi.elmar@gmail.com";
+
+function demoMailto(from: string) {
+  const subject = "Richiesta demo Digital Planner";
+  const body = `Salve,\nvorrei prenotare una demo guidata di Digital Planner.\n\nEmail di contatto: ${from}\nAzienda:\nTelefono:\n`;
+  return `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+}
+
 export function CTA() {
   const [sent, setSent] = useState(false);
   const [email, setEmail] = useState("");
@@ -23,12 +31,20 @@ export function CTA() {
               className="lg:col-span-5"
               onSubmit={(e) => {
                 e.preventDefault();
+                window.location.href = demoMailto(email);
                 setSent(true);
               }}
             >
               {sent ? (
                 <div className="flex items-center gap-3 rounded-lg border border-accent/40 bg-accent/10 p-4 text-sm">
-                  <Check size={18} className="text-accent" /> Richiesta ricevuta: ti ricontattiamo entro un giorno lavorativo.
+                  <Check size={18} className="text-accent" />
+                  <span>
+                    Si apre il tuo client di posta con la richiesta precompilata. Se non si apre, scrivi a{" "}
+                    <a href={demoMailto(email)} className="underline hover:text-accent">
+                      {CONTACT_EMAIL}
+                    </a>
+                    .
+                  </span>
                 </div>
               ) : (
                 <div className="flex flex-col gap-3 sm:flex-row">
@@ -48,7 +64,12 @@ export function CTA() {
                   </button>
                 </div>
               )}
-              <p className="mt-3 text-[11px] text-muted">Nessuna carta di credito. Dati trattati secondo GDPR.</p>
+              <p className="mt-3 text-[11px] text-muted">
+                Nessuna carta di credito. Dati trattati secondo GDPR. Oppure scrivi direttamente a{" "}
+                <a href={`mailto:${CONTACT_EMAIL}`} className="underline hover:text-fg">
+                  {CONTACT_EMAIL}
+                </a>
+              </p>
             </form>
           </div>
         </motion.div>
