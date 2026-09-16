@@ -1,0 +1,15 @@
+[Unit]
+Description=Digital Planner contact form endpoint
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/digital-planner
+EnvironmentFile=-/opt/digital-planner/contact.env
+ExecStart=/usr/bin/python3 /opt/digital-planner/contact_server.py
+Restart=always
+RestartSec=3
+MemoryMax=64M
+
+[Install]
+WantedBy=multi-user.target
