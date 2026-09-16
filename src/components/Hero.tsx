@@ -38,7 +38,7 @@ export default function Hero() {
             <span className="bg-gradient-to-r from-accent to-info bg-clip-text text-transparent"> con l&apos;AI.</span>
           </motion.h1>
           <motion.p variants={fadeUp} custom={2} className="lead">
-            Digita Planner unisce un motore di orchestrazione dei workflow, un planner verticale per il food e un livello di intelligenza
+            Digital Planner unisce un motore di orchestrazione dei workflow, un planner verticale per il food e un livello di intelligenza
             artificiale che prevede la domanda, individua i colli di bottiglia e ottimizza turni e impianti. Ogni numero passa da un
             algoritmo deterministico: l&apos;AI spiega, non inventa.
           </motion.p>

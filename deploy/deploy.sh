@@ -18,13 +18,13 @@ npm run build >/dev/null
 "${SCP[@]}" /tmp/dp-out.tgz /tmp/dp-planner.tgz deploy/nginx-planner.conf "$HOST:/tmp/"
 "${SSH[@]}" "$HOST" '
 set -e
-rm -rf /opt/digita-planner/out.new /opt/digita-planner/out-planner.new
-mkdir -p /opt/digita-planner/out.new /opt/digita-planner/out-planner.new
-tar xzf /tmp/dp-out.tgz -C /opt/digita-planner/out.new
-tar xzf /tmp/dp-planner.tgz -C /opt/digita-planner/out-planner.new
-rm -rf /opt/digita-planner/out /opt/digita-planner/out-planner
-mv /opt/digita-planner/out.new /opt/digita-planner/out
-mv /opt/digita-planner/out-planner.new /opt/digita-planner/out-planner
+rm -rf /opt/digital-planner/out.new /opt/digital-planner/out-planner.new
+mkdir -p /opt/digital-planner/out.new /opt/digital-planner/out-planner.new
+tar xzf /tmp/dp-out.tgz -C /opt/digital-planner/out.new
+tar xzf /tmp/dp-planner.tgz -C /opt/digital-planner/out-planner.new
+rm -rf /opt/digital-planner/out /opt/digital-planner/out-planner
+mv /opt/digital-planner/out.new /opt/digital-planner/out
+mv /opt/digital-planner/out-planner.new /opt/digital-planner/out-planner
 install -m 644 /tmp/nginx-planner.conf /etc/nginx/sites-available/planner.percorsisolari.it
 ln -sf /etc/nginx/sites-available/planner.percorsisolari.it /etc/nginx/sites-enabled/
 nginx -t && systemctl reload nginx

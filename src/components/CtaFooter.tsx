@@ -79,7 +79,7 @@ export function Footer() {
           <a href="#contact" className="hover:text-fg">
             Contatti
           </a>
-          <span>© {new Date().getFullYear()} Digita Planner</span>
+          <span>© {new Date().getFullYear()} Digital Planner</span>
         </div>
       </div>
     </footer>

@@ -1,6 +1,6 @@
-# Digita Planner — sito web
+# Digital Planner — sito web
 
-Landing page / demo interattiva di **Digita Planner** (Process Orchestration + Food Production Planning con AI nativa).
+Landing page / demo interattiva di **Digital Planner** (Process Orchestration + Food Production Planning con AI nativa).
 
 Stack: Next.js 14 (static export), React 18, TypeScript, Tailwind CSS, Lucide Icons, Framer Motion.
 
@@ -14,7 +14,7 @@ npm run build      # export statico in ./out
 
 ## Deploy su IONOS
 
-- Produzione: `https://planner.percorsisolari.it` (nginx, root `/opt/digita-planner/out`)
+- Produzione: `https://planner.percorsisolari.it` (nginx, root `/opt/digital-planner/out`)
 - Anteprima temporanea: `https://pascale-tv.percorsisolari.it/planner/` (build con `NEXT_PUBLIC_BASE_PATH=/planner`)
 
 ```bash

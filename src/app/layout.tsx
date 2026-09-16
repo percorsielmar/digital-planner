@@ -14,11 +14,11 @@ const mono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Digita Planner — Process Orchestration & Food Production Planning con AI nativa",
+  title: "Digital Planner — Process Orchestration & Food Production Planning con AI nativa",
   description:
     "Piattaforma B2B per orchestrare i processi produttivi e pianificare la produzione alimentare: batch planning, tracciabilità, forecasting AI, ottimizzazione turni e sicurezza enterprise.",
   openGraph: {
-    title: "Digita Planner",
+    title: "Digital Planner",
     description: "Orchestrazione dei processi e pianificazione della produzione alimentare con AI nativa.",
     type: "website",
     url: "https://planner.percorsisolari.it",

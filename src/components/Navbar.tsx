@@ -15,12 +15,12 @@ const LINKS = [
 
 export function Logo({ className = "" }: { className?: string }) {
   return (
-    <a href="#top" className={`flex items-center gap-2.5 ${className}`} aria-label="Digita Planner">
+    <a href="#top" className={`flex items-center gap-2.5 ${className}`} aria-label="Digital Planner">
       <span className="grid h-8 w-8 place-items-center rounded-lg bg-accent text-black shadow-glow">
         <Boxes className="h-4.5 w-4.5" size={18} />
       </span>
       <span className="text-[15px] font-semibold tracking-tight">
-        Digita <span className="text-muted">Planner</span>
+        Digital <span className="text-muted">Planner</span>
       </span>
     </a>
   );
