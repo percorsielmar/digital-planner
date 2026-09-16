@@ -3,25 +3,67 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg: 250 250 250;
+  --surface: 255 255 255;
+  --raised: 244 244 245;
+  --line: 228 228 231;
+  --fg: 17 17 20;
+  --muted: 100 100 110;
+  color-scheme: light;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.dark {
+  --bg: 9 10 14;
+  --surface: 15 17 23;
+  --raised: 22 25 33;
+  --line: 38 42 54;
+  --fg: 240 241 245;
+  --muted: 148 152 166;
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: "cv11", "ss01";
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+@layer components {
+  .container-x {
+    @apply mx-auto w-full max-w-7xl px-5 sm:px-8;
   }
+  .card {
+    @apply rounded-xl border border-line bg-surface shadow-card;
+  }
+  .eyebrow {
+    @apply inline-flex items-center gap-2 rounded-full border border-line bg-raised px-3 py-1 text-xs font-medium tracking-wide text-muted;
+  }
+  .h2 {
+    @apply text-3xl font-semibold tracking-tight sm:text-4xl;
+  }
+  .lead {
+    @apply mt-4 max-w-2xl text-base text-muted sm:text-lg;
+  }
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg bg-accent px-5 py-2.5 text-sm font-semibold text-black transition hover:bg-accent-soft focus:outline-none focus-visible:ring-2 focus-visible:ring-accent/60;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg border border-line bg-surface px-5 py-2.5 text-sm font-semibold text-fg transition hover:bg-raised focus:outline-none focus-visible:ring-2 focus-visible:ring-accent/60;
+  }
+  .mono-badge {
+    @apply rounded-md border border-line bg-raised px-1.5 py-0.5 font-mono text-[11px] text-muted;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(var(--line));
+  border-radius: 8px;
 }
