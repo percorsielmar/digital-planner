@@ -26,7 +26,7 @@ export default function EnergySection() {
           <span className="eyebrow">
             <Sun size={13} className="text-accent" /> Energy & Asset Intelligence
           </span>
-          <h2 className="h2 mt-4">L&apos;energia è un ingrediente: la pianifichiamo anche lei</h2>
+          <h2 className="h2 mt-4">L&apos;energia è un ingrediente: pianifichiamo anche lei</h2>
           <p className="lead">
             Lo stesso motore di anomaly detection usato per la produzione monitora impianti fotovoltaici e consumi dello stabilimento. Le fasce di
             produzione energivora vengono spostate quando l&apos;autoproduzione è massima, e ogni deviazione degli impianti è segnalata prima che diventi un costo.
